@@ -26,7 +26,7 @@ const message: Message = {
     message: messageToSend, 
     created_at: Date.now(), 
     username: 'Jess Parker', 
-    profilePic: 'https://appstraveler.com/profile-pic', 
+    profilePic: 'https://links.papareact.com/jne', 
     email: 'je_parker@outlook.com'
 }
 
