@@ -7,10 +7,10 @@ import {useEffect} from "react";
 import {clientPusher} from "../pusher";
 
 type Props = {
-  initialMessages: Message[]
-}
+  initialMessages: Message[];
+};
 
-function MessageList(  {initialMessages}: Props ) {
+function MessageList({initialMessages}: Props) {
   const {
     data: messages,
     error,
@@ -20,7 +20,7 @@ function MessageList(  {initialMessages}: Props ) {
   useEffect(() => {
     const channel = clientPusher.subscribe("messages");
     channel.bind("new-message", async (data: Message) => {
-      // if (messages?.find((message) => message.id === data.id)) return; 
+      // if (messages?.find((message) => message.id === data.id)) return;
       if (!messages) {
         mutate(fetcher);
       } else {
@@ -31,11 +31,10 @@ function MessageList(  {initialMessages}: Props ) {
       }
     });
 
-    return ( ) => {
+    return () => {
       channel.unbind_all();
       channel.unsubscribe();
-    }
-
+    };
   }, [messages, mutate, clientPusher]);
   return (
     <div className="space-y-5 px-5 pt-8 pb-32 max-w-2xl xl:max-w-4xl mx-auto">

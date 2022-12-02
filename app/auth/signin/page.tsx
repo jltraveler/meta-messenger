@@ -1,7 +1,7 @@
 import React from "react";
-import {getProviders } from "next-auth/react";
+import {getProviders} from "next-auth/react";
 import Image from "next/image";
-import SignInComponent from './SignInComponent'
+import SignInComponent from "./SignInComponent";
 
 async function SignInPage() {
   const providers = await getProviders();
@@ -18,8 +18,7 @@ async function SignInPage() {
         />
       </div>
 
-<SignInComponent providers={providers} />
-
+      <SignInComponent providers={providers} />
     </div>
   );
 }

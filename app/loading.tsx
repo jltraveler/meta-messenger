@@ -3,7 +3,7 @@ import React from "react";
 function Loading() {
   return (
     <div className="text-center pt-8">
-        <p className="text-blue-400 pb-5 animate-pulse">Loading Messenger</p>
+      <p className="text-blue-400 pb-5 animate-pulse">Loading Messenger</p>
       <div role="status">
         <svg
           className="inline mr-2 w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
